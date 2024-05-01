@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Finance Manager</title>
+        <script type="module">
+            import init, { Expense } from "./pkg/investments.js";
+
+            async function run() {
+                await init();
+
+                let expense = new Expense(
+                    1,
+                    100.0,
+                    "Groceries",
+                    "2021-10-01",
+                    "Weekly groceries",
+                );
+                console.log(expense);
+                expense.update_amount(120.0);
+                console.log(expense);
+            }
+
+            run();
+        </script>
+    </head>
+    <body>
+        <h1>Finance Management Application</h1>
+    </body>
+</html>
